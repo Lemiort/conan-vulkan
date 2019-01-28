@@ -34,7 +34,8 @@ The example below shows the commands used to publish to ulricheck conan reposito
     
 ## Add Remote
 
-    $ conan remote add lemiort "https://conan.campar.in.tum.de/api/conan/conan-lemiort" True
+    $ conan remote add lemiort "https://api.bintray.com/conan/lemiort/public-conan" True
+
 
 ## Upload
 
