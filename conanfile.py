@@ -7,9 +7,9 @@ import os
 
 class VulkanConan(ConanFile):
     name = "vulkan"
-    version = "1.1.85.0"
+    version = "1.1.97.0"
     description = "Vulkan is a new generation graphics and compute API that provides high-efficiency, cross-platform access to modern GPUs used in a wide variety of devices from PCs and consoles to mobile phones and embedded platforms."
-    url = "https://github.com/ulricheck/conan-vulkan"
+    url = "https://github.com/Lemiort/conan-vulkan.git"
     homepage = "https://www.lunarg.com/vulkan-sdk/"
 
     # Indicates License type of the packaged library
@@ -96,10 +96,10 @@ class VulkanConan(ConanFile):
                     self.copy(pattern="*.json", dst="bin", src=bin_folder, keep_path=False)
                     self.copy(pattern="*.lib", dst="lib", src=lib_folder, keep_path=False)
                     self.copy(pattern="*.pdb", dst="lib", src=lib_folder, keep_path=False)
-                os.remove(os.path.join(self.package_folder, 'lib', 'VKstatic.1.lib'))
+                os.remove(os.path.join(self.package_folder, 'lib', 'vulkan-1.lib'))
                 os.remove(os.path.join(self.package_folder, 'lib', 'shaderc_combined.lib'))
             else:
-                self.copy(pattern="VKstatic.1.lib", dst="lib", src=lib_folder, keep_path=False)
+                self.copy(pattern="vulkan-1.lib", dst="lib", src=lib_folder, keep_path=False)
 
 
         elif self.settings.os == "Macos":

@@ -6,14 +6,14 @@
 
 ### Basic setup
 
-    $ conan install vulkan/1.1.85.0@camposs/stable
+    $ conan install vulkan/1.1.97.0@lemiort/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    vulkan/1.1.85.0@camposs/stable
+    vulkan/1.1.97.0@lemiort/stable
 
     [generators]
     txt
@@ -30,15 +30,15 @@ The example below shows the commands used to publish to ulricheck conan reposito
 
 ## Build & Package
 
-    $ conan create . camposs/stable
+    $ conan create . lemiort/stable
     
 ## Add Remote
 
-    $ conan remote add camposs "https://conan.campar.in.tum.de/api/conan/conan-camposs" True
+    $ conan remote add lemiort "https://conan.campar.in.tum.de/api/conan/conan-lemiort" True
 
 ## Upload
 
-    $ conan upload -r camposs vulkan/1.1.85.0@camposs/stable
+    $ conan upload -r lemiort vulkan/1.1.97.0@lemiort/stable
 
 ### License
 [License](https://vulkan.lunarg.com/sdk/home#sdk-license)
